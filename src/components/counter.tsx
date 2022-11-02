@@ -1,7 +1,8 @@
+import { FunctionComponent } from "react";
 import { incrementRandom, reset } from "../features/counterSlice";
 import { RootState, useAppDispatch, useAppSelector } from "../store/store";
 
-const Counter = () => {
+const Counter: FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const { value, prime, randomNumber } = useAppSelector(

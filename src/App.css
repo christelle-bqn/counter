@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  width: 100vw;
+  background-color: #d6fff6;
+  height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +38,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navContainer {
+  background-color: #2374ab;
+}
+
+.nav {
+  width: 40%;
+  min-width: 400px;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
 }

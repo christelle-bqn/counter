@@ -5,15 +5,24 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+const client = new ApolloClient({
+  uri: "http://localhost:4000/",
+  cache: new InMemoryCache(),
+});
+
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <ApolloProvider client={client}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ApolloProvider>
   </React.StrictMode>
 );
 
